@@ -1,0 +1,41 @@
+
+        <h1>Book Details</h1> 
+
+        </table>
+        <table border="1" style="width:80%">
+            <tr>
+                <th>Book Cover</th>
+                <th>Title</th> 
+                <th>Author</th>
+                <th>ID</th> 
+                <th>Modified</th> 
+                <th>Created</th> 
+            </tr>
+           {{#each bookDetails}}
+           <tr>
+                <td width="10%" align="center">
+                    <img    src="/{{this.cover_thumbnail}}" width="100" height="100">
+                </td>
+                <td width="30%" align="center">{{this.title}}</td>
+                <td width="30%" align="center">{{this.author_firstname}} {{this.author_lastname}}</td>
+                <td width="10%" align="center">{{this.id}}</td>
+                <td width="10%" align="center">{{this.modified_date}}</td>
+                <td width="10%" align="center">{{this.created_date}}</td>
+                <td></td>
+            </tr>
+            {{/each}}
+            <tr>
+                <form>
+                <td width="10%" align="center"></td>
+                <td width="30%" align="center"><input type="text" name="title" maxlength="30" size="30"></td>
+                <td width="30%" align="center"><input type="text" name="author" maxlength="30" size="30" ></td>
+                <td width="10%" align="center"><input type="text" name="id"></td>
+                <td>
+                    <button type="submit" formmethod="POST" formaction="/api/book/save">
+                        Save
+                    </button>
+                </td>
+                </form>
+            </tr>
+
+        </table>

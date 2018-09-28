@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Directory of Books</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Selection Type:</td>
+                    <td>   
+                        <select name="selectionType">
+                            <option value="T">Title (default)</option>
+                            <option value="A">Author</option>
+                            <option value="AT">Both</option>
+                        </select>
+                    </td>
+                    <td>   
+                        <select name="orderBy">
+                            <option value="N">sort by Title (default)</option>
+                            <option value="B">sort by Author</option>
+                        </select>
+                    </td>
+                    <td>   
+                        <select name="limit">
+                            <option value="10">Limit to 10 (default)</option>
+                            <option value="20">Limit to 20</option>
+                            <option value="50">Limit to 50</option>
+                            <option value="100">Limit to 100</option>
+                            <option value="200">ALL</option>
+                        </select>
+                    </td>
+                    <td>   
+                        <select name="offset">
+                            <option value="0">offset = 0 (default)</option>
+                            <option value="10">offset = 10</option>
+                            <option value="50">offset = 50</option>
+                            <option value="100">offset = 100</option>
+                        </select>
+                    </td>
+                    <td>   
+                        <select name="ascent">
+                            <option value="true">Ascending (default)</option>
+                            <option value="false">Descending</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr></tr>
+                 <tr></tr>
+                <tr> 
+                    <td>Keyword(s):</td>
+                    <td colspan="5"> <input type="text" name="keyword" maxlength="100" size="100"> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" formmethod="get" formaction="/api/search">
+                            Search
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    {{{body}}}
+</body>
+</html>

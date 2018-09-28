@@ -1,0 +1,19 @@
+
+
+        <h1>Query List</h1> <h3>Total records found : {{queryListLength}}</h3>
+        <table border="1" style="width:80%">
+            <tr>
+                <th>Book Cover</th>
+                <th>Title</th> 
+                <th>Author</th>
+            </tr>
+           {{#each queryList}}
+           <tr>
+                <td width="10%" align="center">
+                    <img    src="/{{this.cover_thumbnail}}" width="100" height="100">
+                </td>
+                <td width="50%" align="center"><a href="/api/book/{{this.id}}">{{this.title}}</a></td>
+                <td width="30%" align="center">{{this.author_firstname}} {{this.author_lastname}}</td>
+            </tr>
+            {{/each}}
+        </table>
