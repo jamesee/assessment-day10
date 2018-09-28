@@ -146,12 +146,12 @@ app.post(API_URI + "/book/save",  (req, res) => {
 
         saveBook([title, author_firstname, author_lastname, req.body.id])
         .then( (results) => {
-                resp.status(200).type('text/html');
-                resp.render('response', {
-                layout: "main.hbs",
-                bookDetails: results
-                });
-                // res.status(200).json({message : "successfully saved"});
+                // resp.status(200).type('text/html');
+                // resp.render('response', {
+                // layout: "main.hbs",
+                // bookDetails: results
+                // });
+                res.status(200).json({message : "successfully saved"});
         })
         .catch((error) => {
             res.status(500).json(error).end();
