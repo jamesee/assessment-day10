@@ -1,5 +1,5 @@
 
-# This repository contains the submission for Server-Side-Foundation end-of-course submission.
+# This repository contains the submission for Server-Side-Foundation end-of-course assessment.
 
 ## **Code Documentation**
 
